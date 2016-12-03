@@ -22,6 +22,15 @@
 (if (nil? input-file) (getopts:usage))
 (if (nil? output-file) (getopts:usage))
 
+;- - - Check file existence
+(if (not (file? input-file))
+	(begin
+		(println "Input file [" input-file "] not found!")
+		(exit)
+	)
+)
+
+
 (setf output-content "")
 
 (setf file-content (read-file input-file))
