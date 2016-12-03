@@ -1,6 +1,6 @@
 # newlisp-netnames
 Given a text file filled with IP's (one per row),<br/>
-return a new text file with the same IP plus the corresponding netname value (one per row).
+the program will return a new text file with the same IP plus the corresponding netname value (one per row).
 
 If the input file contains:<br/>
 <pre><code>
