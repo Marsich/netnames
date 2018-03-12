@@ -68,7 +68,7 @@
 				(setf myip (nth 0 $it))				
 				(setf whois-data (exec (string *whois* " " myip)))
 				(dolist (ln whois-data)
-					(if (find "netname:" ln)
+					(if (find "netname:" (lower-case ln))
 						(begin
 							(setf ip+netname (string myip ";" (trim (slice ln 8))))
 							(println ip+netname)
